@@ -17,10 +17,11 @@ export function show(id) {
         method: 'get'
     })
 }
-export function store(id) {
+export function store(data) {
     return request({
         url: `${url}`,
-        method: 'post'
+        method: 'post',
+        data
     })
 }
 export function update(data) {

@@ -48,7 +48,7 @@
   <el-upload
   class="upload-demo"
   ref="upload"
-  action="http://erp.ouenyione.com/api/cates/upload/"
+  action="http://erp.ouenyione.com/api/cates/upload"
   :auto-upload="false"
   :headers="uploadHeaders"
   :with-credentials='true'
@@ -136,7 +136,7 @@ if (Array.isArray(name)){
     info +=item + ','
   })
 }
-  info = info.substring(0,str.length-1)
+  info = info.substring(0,info.length-1)
   return info
   },
   async submitForm(form){
@@ -148,6 +148,7 @@ if (Array.isArray(name)){
             this.$message.success('数据修改成功')
               }
               if(this.isNew){
+                console.log(this.formData)
                 await store(this.formData)
             this.$message.success('种类添加成功')
               }
